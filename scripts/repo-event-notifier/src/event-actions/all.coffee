@@ -33,73 +33,80 @@ buildNewIssueOrPRMessage = (data, eventType, callback) ->
 module.exports =
   commit_comment: (data, callback) ->
       comment = data.comment
+      repo = data.repository
 
-      callback ""
+      callback "New comment by #{comment.user.login}
+      on Commit #{comment.commit_id}: #{comment.body} -- #{comment.html_url}"
 
   create: (data, callback) ->
       repo = data.repository
+      ref_type = data.ref_type
+      ref = data.ref
 
-      callback ""
+      callback "New #{ref_type} #{ref} created on #{repo.name}"
 
   delete: (data, callback) ->
       repo = data.repository
+      ref_type = data.ref_type
 
-      callback ""
+      callback "#{ref_type} deleted on #{repo.name}"
 
   deployment: (data, callback) ->
       deploy = data.deployment
       repo = data.repository
 
-      callback ""
+      callback "New deployment #{deploy.id} from: #{repo.name} to: #{deploy.environment} started by: #{deploy.creator.login}"
 
   deployment_status: (data, callback) ->
       deploy = data.deployment
       deploy_status = data.deployment_status
       repo = data.repository
 
-      callback ""
+      callback "Deployment #{deploy.id} from: #{repo.name} to: #{deploy.environment} - #{deploy_status.state} by #{deploy.status.creator.login}"
 
   fork: (data, callback) ->
       forkee = data.forkee
       repo = data.repository
 
-      callback ""
+      callback "#{repo.name} forked by #{forkee.owner.login}"
 
+  # Needs to handle more then just one page
   gollum: (data, callback) ->
       pages = data.pages
       repo = data.repository
+      sender = data.sender
 
-      callback ""
+      page = pages[0]
+
+      callback "Wiki page: #{page.page_name} on #{repo.name} by #{sender.login}"
 
   issues: (data, callback) ->
       issue = data.issue
       repo = data.repository
 
-      mentioned_line = extractMentionsFromBody(issue.body)
-
-      callback "New issue \##{issue.number} \"#{issue.title}\" by #{issue.user.login}: #{issue.html_url}#{mentioned_line}"
+      callback "New issue \##{issue.number} \"#{issue.title}\" by #{issue.user.login}: #{issue.html_url}"
 
   issue_comment: (data, callback) ->
       issue = data.issue
       comment = data.comment
       repo = data.repository
 
-      mentioned_line = extractMentionsFromBody(comment.body)
-
-      callback "New Comment on Issue \##{issue.number} by #{comment.user.login}: \"#{comment.body}\" - #{comment.html_url}#{mentioned_line}"
+      callback "New Comment on Issue \##{issue.number} by #{comment.user.login}: \"#{comment.body}\" - #{comment.html_url}"
 
   member: (data, callback) ->
       member = data.member
       repo = data.repository
 
-      callback ""
+      callback "Member #{member.login} #{data.action} from #{repo.name}"
 
   # Org level event
   membership: (data, callback) ->
       scope = data.scope
       member = data.member
+      team = data.team
+      org = data.organization
 
-      callback ""
+      callback "#{org.login} #{data.action} #{member.login} to #{scope} #{team.name}"
 
   page_build: (data, callback) ->
       build = data.build
@@ -110,20 +117,13 @@ module.exports =
       if build.error.message?
         callback "Page build for #{data.repository.full_name} errored: #{build.error.message}."
 
-  public: (data, callback) ->
-      repo = data.repository
-
-      callback ""
-
   pull_request_review_comment: (data, callback) ->
       comment = data.comment
       pull_req = data.pull_request
       base = data.base
       repo = data.repository
 
-      mentioned_line = extractMentionsFromBody(comment.body)
-
-      callback "New Comment on Pull Request \"#{comment.body}\" by #{comment.user.login}: #{comment.html_url}#{mentioned_line}"
+      callback "New Comment on Pull Request \"#{comment.body}\" by #{comment.user.login}: #{comment.html_url}"
 
   pull_request: (data, callback) ->
       pull_num = data.number
@@ -131,9 +131,7 @@ module.exports =
       base = data.base
       repo = data.repository
 
-      mentioned_line = extractMentionsFromBody(pull_req.body)
-
-      callback "New Pull Request \"#{pull_req.title}\" by #{pull_req.user.login}: #{pull_req.html_url}#{mentioned_line}"
+      callback "New Pull Request \"#{pull_req.title}\" by #{pull_req.user.login}: #{pull_req.html_url}"
 
   push: (data, callback) ->
       commit = data.after
@@ -142,23 +140,24 @@ module.exports =
       repo = data.repository
       pusher = data.pusher
 
-      mentioned_line = extractMentionsFromBody(issue.body)
-
-      callback "New Commit \"#{head_commit.message}\" by #{pusher.name}: #{head_commit.url}#{mentioned_line}"
+      callback "New Commit \"#{head_commit.message}\" to #{repo.name} by #{pusher.name}: #{head_commit.url}"
 
   # Org level event
   repository: (data, callback) ->
       repo = data.repository
       org = data.organization
+      action = data.action
 
-      callback ""
+      callback "#{repo.full_name} #{action}"
 
   release: (data, callback) ->
       release = data.release
       repo = data.repository
+      action = data.action
 
-      callback ""
+      callback "Release #{release.tag_name} #{action} on #{repo.name}"
 
+  # No clue what to do with this one.
   status: (data, callback) ->
       commit = data.commit
       state = data.state
@@ -167,15 +166,8 @@ module.exports =
 
       callback ""
 
-  team_add: (data, callback) ->
-      team = data.team
-      repo = data.repository
-      org = data.organization
-
-      callback ""
-
   watch: (data, callback) ->
       repo = data.repository
       sender = data.sender
 
-      callback ""
+      callback "#{repo.name} is now being watched by #{sender.login}"
