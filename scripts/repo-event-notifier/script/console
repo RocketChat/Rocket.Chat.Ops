@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+require('coffee-script');
+var repl    = require("repl");
+var context = repl.start("> ").context;
+
+// Configure what's available in the REPL
+context.eventPayloads = {
+  page_build:   require(process.cwd() + "/test/fixtures/page_build.json"),
+  issues:       require(process.cwd() + "/test/fixtures/issues.json"),
+  pull_request: require(process.cwd() + "/test/fixtures/pull_request.json")
+};
+context.notifier = require(process.cwd() + "/src/github-repo-event-notifier.coffee");
+context.actions  = require(process.cwd() + "/src/event-actions/all.coffee");

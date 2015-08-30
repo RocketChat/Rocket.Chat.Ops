@@ -1,0 +1,45 @@
+{
+  "name": "hubot-github-repo-event-notifier",
+  "description": "Notifies about any available GitHub repo event via webhook",
+  "version": "1.3.2",
+  "author": "patcon@gittip",
+  "contributors": [
+    "spajus@vinted",
+    "parkr"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "notifier",
+    "github",
+    "events",
+    "webhooks"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/patcon/hubot-github-repo-event-notifier.git"
+  },
+  "bugs": {
+    "url": "https://github.com/patcon/hubot-github-repo-event-notifier/issues"
+  },
+  "dependencies": {
+    "coffee-script": "~1.6",
+    "url": "~0.7.9",
+    "querystring": "~0.2.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*",
+    "grunt-mocha-test": "~0.7.0",
+    "grunt-release": "~0.6.0",
+    "matchdep": "~0.1.2",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "main": "index.coffee",
+  "scripts": {
+    "test": "grunt test"
+  }
+}
