@@ -1,14 +1,29 @@
 #!/usr/bin/env node
 
 require('coffee-script');
-var repl    = require("repl");
+var repl	= require("repl");
 var context = repl.start("> ").context;
 
 // Configure what's available in the REPL
 context.eventPayloads = {
-  page_build:   require(process.cwd() + "/test/fixtures/page_build.json"),
-  issues:       require(process.cwd() + "/test/fixtures/issues.json"),
-  pull_request: require(process.cwd() + "/test/fixtures/pull_request.json")
+	page_build:   require(process.cwd() + "/test/fixtures/page_build.json"),
+	issues:	   require(process.cwd() + "/test/fixtures/issues.json"),
+	pull_request: require(process.cwd() + "/test/fixtures/pull_request.json"),
+	commit_comment: require(process.cwd() + "/test/fixtures/commit_comment.json"),
+	create: require(process.cwd() + "/test/fixtures/create.json"),
+	delete: require(process.cwd() + "/test/fixtures/delete.json"),
+	deployment: require(process.cwd() + "/test/fixtures/deployment.json"),
+	deployment_status: require(process.cwd() + "/test/fixtures/deployment_status.json"),
+	fork: require(process.cwd() + "/test/fixtures/fork.json"),
+	gollum: require(process.cwd() + "/test/fixtures/gollum.json"),
+	issue_comment: require(process.cwd() + "/test/fixtures/issue_comment.json"),
+	issues: require(process.cwd() + "/test/fixtures/issues.json"),
+	member: require(process.cwd() + "/test/fixtures/member.json"),
+	membership: require(process.cwd() + "/test/fixtures/membership.json"),
+	push: require(process.cwd() + "/test/fixtures/push.json"),
+	release: require(process.cwd() + "/test/fixtures/release.json"),
+	repository: require(process.cwd() + "/test/fixtures/repository.json"),
+	watch: require(process.cwd() + "/test/fixtures/watch.json")
 };
 context.notifier = require(process.cwd() + "/src/github-repo-event-notifier.coffee");
 context.actions  = require(process.cwd() + "/src/event-actions/all.coffee");
