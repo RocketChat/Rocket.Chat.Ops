@@ -41,7 +41,9 @@ module.exports =
 		repo = data.repository
 		ref_type = data.ref_type
 
-		callback "#{ref_type} deleted on #{repo.full_name}"
+		ref = data.ref.split('refs/heads/').join('')
+
+		callback "#{ref_type} #{ref} deleted on #{repo.full_name}"
 
 	deployment: (data, callback) ->
 		deploy = data.deployment
@@ -76,15 +78,39 @@ module.exports =
 		issue = data.issue
 		repo = data.repository
 		action = data.action
+		sender = data.sender
 
-		callback "Issue \##{issue.number} \"#{issue.title}\" #{action} by #{issue.user.login}: #{issue.html_url}"
+		msg = "Issue \##{issue.number} \"#{issue.title}\""
+
+		switch action
+			when "assigned"
+				msg += " assigned to: #{issue.assignee.login} by #{sender.login} "
+			when "unassigned"
+				msg += " unassigned #{data.assignee.login} by #{sender.login} "
+			when "opened"
+				msg += " opened by #{sender.login} "
+			when "closed"
+				msg += " closed by #{sender.login} "
+			when "reopened"
+				msg += " reopened by #{sender.login} "
+			when "labeled"
+				msg += " #{sender.login} added label: \"#{data.label.name}\" "
+			when "unlabeled"
+				msg += " #{sender.login} removed label: \"#{data.label.name}\" "
+
+		callback msg + "- #{issue.html_url}"
 
 	issue_comment: (data, callback) ->
 		issue = data.issue
 		comment = data.comment
 		repo = data.repository
 
-		callback "New Comment on Issue \##{issue.number} by #{comment.user.login}: \"#{comment.body}\" - #{comment.html_url}"
+		issue_pull = "Issue"
+
+		if comment.html_url.indexOf("/pull/") > -1
+			issue_pull = "Pull Request"
+
+		callback "New Comment on #{issue_pull} \##{issue.number} by #{comment.user.login}: \"#{comment.body}\" - #{comment.html_url}"
 
 	member: (data, callback) ->
 		member = data.member
@@ -123,9 +149,34 @@ module.exports =
 		pull_req = data.pull_request
 		base = data.base
 		repo = data.repository
+		sender = data.sender
+
 		action = data.action
 
-		callback "Pull Request \##{data.number} \"#{pull_req.title}\" #{action} by #{pull_req.user.login}: #{pull_req.html_url}"
+		msg = "Pull Request \##{data.number} \"#{pull_req.title}\" "
+
+		switch action
+			when "assigned"
+				msg += " assigned to: #{data.assignee.login} by #{sender.login} "
+			when "unassigned"
+				msg += " unassigned #{data.assignee.login} by #{sender.login} "
+			when "opened"
+				msg += " opened by #{sender.login} "
+			when "closed"
+				if pull_req.merged
+					msg += " merged by #{sender.login} "
+				else
+					msg += " closed by #{sender.login} "
+			when "reopened"
+				msg += " reopened by #{sender.login} "
+			when "labeled"
+				msg += " #{sender.login} added label: \"#{data.label.name}\" "
+			when "unlabeled"
+				msg += " #{sender.login} removed label: \"#{data.label.name}\" "
+			when "synchronize"
+				msg +=" synchornized by #{sender.login} "
+
+		callback msg + "- #{pull_req.html_url}"
 
 	push: (data, callback) ->
 		commit = data.after
@@ -134,7 +185,8 @@ module.exports =
 		repo = data.repository
 		pusher = data.pusher
 
-		callback "New Commit \"#{head_commit.message}\" to #{repo.full_name} by #{pusher.name}: #{head_commit.url}"
+		if data.created
+			callback "New Commit \"#{head_commit.message}\" to #{repo.full_name} by #{pusher.name}: #{head_commit.url}"
 
 	# Org level event
 	repository: (data, callback) ->
