@@ -1,6 +1,6 @@
-# Hubot: hubot-github-repo-event-notifier
+# Hubot: repo-event-notifier
 
-Notifies about any available GitHub repo event via webhook.
+Notifies about any available Gitlab repo event via webhook.
 
 See [`src/github-repo-event-notifier.coffee`](src/github-repo-event-notifier.coffee) for full documentation.
 
