@@ -174,7 +174,7 @@ module.exports =
 			when "unlabeled"
 				msg += " #{sender.login} removed label: \"#{data.label.name}\" "
 			when "synchronize"
-				msg +=" synchornized by #{sender.login} "
+				msg +=" synchronized by #{sender.login} "
 
 		callback msg + "- #{pull_req.html_url}"
 
