@@ -17,7 +17,7 @@ Main features:
 * flexible fly-in panels that can contain abitraty user interface
 * scalable inbound event handling
 * scalable outbound command processing
-* real time feeds, connected via chat fabric, p2p direct from source and sinks into fly-in UI widget(s)
+* real time feeds, connected via chat fabric, p2p direct from source and sinks into UI widget(s) on fly-ins
 * modular, non-intrusive, integration with the mainstream Rocket.Chat core
 
 ### Current status
