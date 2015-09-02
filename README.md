@@ -2,11 +2,11 @@
 
 # Rocket.Chat.Ops
 
-Highly customizable, bot-based,  Github and Gitlab integrations and beyond.
+Highly customizable, bot-based, Github and Gitlab integrations and beyond.
 
 ## About
 
-Extending Rocket.Chat into the realms of specilized _chat centric_ applications.  
+Extending Rocket.Chat into the realms of specialized _chat centric_ applications.  
 
 Starting with a Chat Ops implementation for Github and Gitlab, but extendable to other application areas.
 
