@@ -18,12 +18,12 @@ Main features:
 * scalable inbound event handling
 * scalable outbound command dispatching
 * inbound data rendered by specialized widgets on fly-ins (example: code is rendered in syntax highlighed text editor)
-* real time feeds, connected via chat fabric, p2p direct from source <--> sinks into UI widget(s) on fly-ins
+* real time feeds, connected by chat fabric, p2p direct data stream from source <--> sinks into UI widget(s) on fly-ins
 * modular, non-intrusive, integration with the mainstream Rocket.Chat core
 * bots backwards compatible with Rocket.Chat core
 * extension is per-room customizable, for example: one room for open source project Rocket.Chat developers via github integration, another for MineCraft server farms operators discussion and network monitoring, yet another for a drone delivery service's fleet monitoring and control 
 
-![Two additional fly-in panels](https://cloud.githubusercontent.com/assets/122633/9616015/c435a816-50c9-11e5-90d8-53935a1fa3ab.png)
+![Two additional fly-in panels](https://cloud.githubusercontent.com/assets/122633/9658519/09738aac-5218-11e5-9bac-612fb6c702ff.png)
 
 ![Full syntax highlighted text editor on a fly-in](https://cloud.githubusercontent.com/assets/122633/9616075/2d6b419c-50ca-11e5-8eef-3d378250396d.png)
 
