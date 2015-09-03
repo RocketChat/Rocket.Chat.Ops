@@ -174,7 +174,7 @@ module.exports =
 			when "unlabeled"
 				msg += " #{sender.login} removed label: \"#{data.label.name}\" "
 			when "synchronize"
-				msg +=" synchronized by #{sender.login} "
+				msg +=" synchornized by #{sender.login} "
 
 		callback msg + "- #{pull_req.html_url}"
 
@@ -185,7 +185,7 @@ module.exports =
 		repo = data.repository
 		pusher = data.pusher
 
-		if data.created
+		if !data.deleted
 			callback "New Commit \"#{head_commit.message}\" to #{repo.full_name} by #{pusher.name}: #{head_commit.url}"
 
 	# Org level event
@@ -216,4 +216,4 @@ module.exports =
 		repo = data.repository
 		sender = data.sender
 
-		callback "#{repo.name} is now being watched by #{sender.login}"
+		callback "#{repo.full_name} is now being watched by #{sender.login} on GitHub"
