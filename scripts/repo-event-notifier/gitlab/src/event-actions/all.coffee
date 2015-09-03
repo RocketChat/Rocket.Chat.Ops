@@ -164,4 +164,4 @@ module.exports =
 		repo = data.repository
 		sender = data.sender
 
-		callback "#{repo.name} is now being watched by #{sender.login}"
+		callback "#{repo.full_name} is now being watched by #{sender.login} on GitHub"
