@@ -23,7 +23,7 @@ module.exports = (robot) ->
 		url = "https://api.github.com/users/" + res.match[2] + "/gists"
 		#  console.log 'url' + url
 		github.get url, (gists) ->
-			github.get "https://api.github.com/gists/" + gists[res.match[1]].id, (gist) ->
+			github.get "https://api.github.com/gists/" + gists[parseInt(res.match[1]) - 1].id, (gist) ->
 				# console.log JSON.stringify gist
 				for k,v of gist.files
 					output = '```\n#ops:openeditor\n\n' + v.content + '\n```'
