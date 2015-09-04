@@ -27,6 +27,37 @@ Main features:
 
 ![Full syntax highlighted text editor on a fly-in](https://cloud.githubusercontent.com/assets/122633/9616075/2d6b419c-50ca-11e5-8eef-3d378250396d.png)
 
+## Ready for Contributors!
+
+Please contrbiute to our bot based integration by adding your bots.
+
+#### For github contributors
+* no need to understand Rocket.Chat core code 
+* basic familiarity with JavaScript or CoffeeScript is all that is required
+* follow this [one page howto on bots scripting](https://hubot.github.com/docs/scripting/)
+* code and contribute your bot into the `scripts/github` directories, examples are already included
+
+#### For gitlab contributors
+* no need to understand Rocket.Chat core code 
+* basic familiarity with JavaScript or CoffeeScript is all that is required
+* follow this [one page howto on bots scripting](https://hubot.github.com/docs/scripting/)
+* code and contribute your bot into the `scripts/gitlab` directories, examples are already included
+
+
+#### For atlassian contributors
+* no need to understand Rocket.Chat core code 
+* basic familiarity with JavaScript or CoffeeScript is all that is required
+* follow this [one page howto on bots scripting](https://hubot.github.com/docs/scripting/)
+* code and contribute your bot into the `scripts/atlassian` directories, examples are already included
+
+#### For other custom app integration contributors
+* no need to understand Rocket.Chat core code 
+* basic familiarity with JavaScript or CoffeeScript is all that is required
+* follow this [one page howto on bots scripting](https://hubot.github.com/docs/scripting/)
+* code and contribute your bot into one single subdirectory of your own under `scripts`, follow the `github` examples 
+
+
+
 ### Current status
 * proof of concept is work in progress
 * fly-in panels, including editor for github/gitlab integrations, are available
