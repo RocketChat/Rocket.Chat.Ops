@@ -4,6 +4,8 @@ module.exports = (robot) ->
 	github = require('githubot')(robot)
 	pad = require('pad')
 
+	# console.log 'You must call me by my name - ' + robot.name
+	# console.log 'If you are curious, I am listening to  ' +  robot.listeners.length + ' source' 
 
 
 	robot.respond /get gists for (.*)/i, (res) ->
