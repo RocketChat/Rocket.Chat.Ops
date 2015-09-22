@@ -1,0 +1,125 @@
+{
+  "name": "gitlab",
+  "version": "1.4.1",
+  "description": "GitLab API Nodejs library.",
+  "main": "lib/index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha tests",
+    "build": "cake build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/node-gitlab/node-gitlab"
+  },
+  "dependencies": {
+    "debug": "*",
+    "slumber": ">=0.7.0"
+  },
+  "devDependencies": {
+    "coffee-script": ">=1.9.1",
+    "mocha": "",
+    "proxyquire": "~1.0.1",
+    "chai": "~1.9.2",
+    "sinon": "~1.10.3",
+    "sinon-chai": "~2.6.0"
+  },
+  "keywords": [
+    "gitlab",
+    "git",
+    "api",
+    "request"
+  ],
+  "author": {
+    "name": "Manfred Touron",
+    "email": "m@42.am"
+  },
+  "contributors": [
+    {
+      "name": "Dave Irvine",
+      "url": "https://github.com/dave-irvine"
+    },
+    {
+      "name": "Glavin Wiechert",
+      "url": "https://github.com/Glavin001"
+    },
+    {
+      "name": "Florian Quiblier",
+      "url": "https://github.com/fofoy"
+    },
+    {
+      "name": "Anthony Heber",
+      "url": "https://github.com/aheber"
+    },
+    {
+      "name": "Evan Heidtmann",
+      "url": "https://github.com/ezheidtmann"
+    },
+    {
+      "name": "luoqpolyvi",
+      "url": "https://github.com/luoqpolyvi"
+    },
+    {
+      "name": "Brian Vanderbusch",
+      "url": "https://github.com/LongLiveCHIEF"
+    },
+    {
+      "name": "daprahamian",
+      "url": "https://github.com/daprahamian"
+    },
+    {
+      "name": "pgorecki",
+      "url": "https://github.com/pgorecki"
+    },
+    {
+      "name": "CaoJun",
+      "url": "https://github.com/mdsb100"
+    },
+    {
+      "name": "nalabjp",
+      "url": "https://github.com/nalabjp"
+    },
+    {
+      "name": "shaoshuai0102",
+      "url": "https://github.com/shaoshuai0102"
+    },
+    {
+      "name": "Sakesan Panjamawat",
+      "url": "https://github.com/sakp"
+    }
+  ],
+  "license": "MIT",
+  "gitHead": "b1bdff7e0128830d57a38b2d86752fe7c1689927",
+  "bugs": {
+    "url": "https://github.com/node-gitlab/node-gitlab/issues"
+  },
+  "homepage": "https://github.com/node-gitlab/node-gitlab",
+  "_id": "gitlab@1.4.1",
+  "_shasum": "58aef1e39804946620c5a8d67a49466910948182",
+  "_from": "gitlab@>=1.4.1 <2.0.0",
+  "_npmVersion": "2.10.1",
+  "_nodeVersion": "0.12.4",
+  "_npmUser": {
+    "name": "m42am",
+    "email": "m@42.am"
+  },
+  "dist": {
+    "shasum": "58aef1e39804946620c5a8d67a49466910948182",
+    "tarball": "http://registry.npmjs.org/gitlab/-/gitlab-1.4.1.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "m42am",
+      "email": "m@42.am"
+    },
+    {
+      "name": "dave-irvine",
+      "email": "dave@daveirvine.me"
+    }
+  ],
+  "_resolved": "https://registry.npmjs.org/gitlab/-/gitlab-1.4.1.tgz",
+  "readme": "ERROR: No README data found!"
+}
