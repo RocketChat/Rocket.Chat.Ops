@@ -21,9 +21,9 @@ Main features:
 * real time feeds, connected by chat fabric, p2p direct data stream from source <--> sinks into UI widget(s) on fly-ins
 * modular, non-intrusive, integration with the mainstream Rocket.Chat core
 * bots backwards compatible with Rocket.Chat core
-* extension is per-room customizable, for example: one room for open source project Rocket.Chat developers via github integration, another for MineCraft server farms operators discussion and network monitoring, yet another for a drone delivery service's fleet monitoring and control 
+* extension is per-room customizable, for example: one room for open source project Rocket.Chat developers via github integration, another for MineCraft server farms operators discussion and network monitoring, yet another for a drone delivery service's fleet monitoring and control (see screenshot below)
 
-![Two additional fly-in panels](https://cloud.githubusercontent.com/assets/122633/9658519/09738aac-5218-11e5-9bac-612fb6c702ff.png)
+![Integrate your apps with fly-in panels](https://raw.githubusercontent.com/Sing-Li/bbug/master/images/dronechatops.png)
 
 ![Full syntax highlighted text editor on a fly-in](https://cloud.githubusercontent.com/assets/122633/9616075/2d6b419c-50ca-11e5-8eef-3d378250396d.png)
 
@@ -59,10 +59,9 @@ Please contrbiute to our bot based integration by adding your bots.
 
 
 ### Current status
-* proof of concept is work in progress
+* EARLY ACCESS - now available!  Start integrating your applications on the Rocket.Chat platform today!
 * fly-in panels, including editor for github/gitlab integrations, are available
-* syncs with this branch on Rocket.Chat core : https://github.com/RocketChat/Rocket.Chat/tree/chatops-ui-rightpanel-flexchrome
-* this is the roadmap for our initial integration, targeted for after 1.0 release of Rocket.Chat core : https://github.com/RocketChat/Rocket.Chat/issues/525
+* rocketchat:chatops package is ready for developers today on [main project repository](https://github.com/rocketchat/Rocket.Chat)
  
 
 [![Test Coverage](https://codeclimate.com/github/RocketChat/Rocket.Chat.Ops/badges/coverage.svg)](https://codeclimate.com/github/RocketChat/Rocket.Chat.Ops/coverage)
