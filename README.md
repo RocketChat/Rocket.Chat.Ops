@@ -1,14 +1,26 @@
 ![Rocket.Chat logo](https://rocket.chat/images/logo/logo-dark.svg?v3)
 
-# Rocket.Chat.Ops
+# Integrate with Rocket.Chat !
 
-Highly customizable, bot-based, Github and Gitlab integrations and beyond.
+Integrate your apps with Rocket.Chat.   Powered by Hubot.
 
-## About
+## Chat-ops is NOW CORE!
 
-Extending Rocket.Chat into the realms of specialized _chat centric_ applications.  
+We are delighted to announce that Chat-ops is now part of core.  See [core repository](https://github.com/RocketChat/Rocket.Chat) for future development.
 
-Starting with a Chat Ops implementation for Github and Gitlab, but extendable to other application areas.
+This repository will showcase a collection of Hubot and Meteor Packages that you can use in your own integrations!
+
+## Hubots 
+* GitHub integration Hubot (outbound)
+* GitHub integration Hubot (inbound)
+* GitLab integration Hubot (outbound)
+* GitLab integration Hubot (inbound)
+
+## Meteor Packages 
+* Drone Fleet Management (mock proof-of-concept demo)
+
+
+### Old Chat-ops information
 
 100% powered by hubot.
 
@@ -27,42 +39,7 @@ Main features:
 
 ![Full syntax highlighted text editor on a fly-in](https://cloud.githubusercontent.com/assets/122633/9616075/2d6b419c-50ca-11e5-8eef-3d378250396d.png)
 
-## Ready for Contributors!
 
-Please contrbiute to our bot based integration by adding your bots.
-
-#### For github contributors
-* no need to understand Rocket.Chat core code 
-* basic familiarity with JavaScript or CoffeeScript is all that is required
-* follow this [one page howto on bots scripting](https://hubot.github.com/docs/scripting/)
-* code and contribute your bot into the `scripts/github` directories, examples are already included
-
-#### For gitlab contributors
-* no need to understand Rocket.Chat core code 
-* basic familiarity with JavaScript or CoffeeScript is all that is required
-* follow this [one page howto on bots scripting](https://hubot.github.com/docs/scripting/)
-* code and contribute your bot into the `scripts/gitlab` directories, examples are already included
-
-
-#### For atlassian contributors
-* no need to understand Rocket.Chat core code 
-* basic familiarity with JavaScript or CoffeeScript is all that is required
-* follow this [one page howto on bots scripting](https://hubot.github.com/docs/scripting/)
-* code and contribute your bot into the `scripts/atlassian` directories, examples are already included
-
-#### For other custom app integration contributors
-* no need to understand Rocket.Chat core code 
-* basic familiarity with JavaScript or CoffeeScript is all that is required
-* follow this [one page howto on bots scripting](https://hubot.github.com/docs/scripting/)
-* code and contribute your bot into one single subdirectory of your own under `scripts`, follow the `github` examples 
-
-
-
-### Current status
-* EARLY ACCESS - now available!  Start integrating your applications on the Rocket.Chat platform today!
-* fly-in panels, including editor for github/gitlab integrations, are available
-* rocketchat:chatops package is ready for developers today on [main project repository](https://github.com/rocketchat/Rocket.Chat)
- 
 
 [![Test Coverage](https://codeclimate.com/github/RocketChat/Rocket.Chat.Ops/badges/coverage.svg)](https://codeclimate.com/github/RocketChat/Rocket.Chat.Ops/coverage)
 [![Code Climate](https://codeclimate.com/github/RocketChat/Rocket.Chat.Ops/badges/gpa.svg)](https://codeclimate.com/github/RocketChat/Rocket.Chat.Ops)
