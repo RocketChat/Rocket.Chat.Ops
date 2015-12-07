@@ -1,0 +1,46 @@
+{
+  "name": "hubot-gitsy",
+  "description": "Rocket.Chat Hubot for GitLab",
+  "version": "0.7.0",
+  "author": {
+    "name": "Rocket.Chat",
+    "email": "support@rocket.chat",
+    "url": "http://rocket.chat/"
+  },
+  "contributors": [
+   {
+    "name": "Sing Li",
+    "email": "sing.li@rocket.chat"
+   }],
+  "license": "MIT",
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "gitlab",
+    "rocketchat"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/RocketChat/Rocket.Chat.Ops.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RocketChat/Rocket.Chat.Ops/issues"
+  },
+  "dependencies": {
+    "coffee-script": "~1.6",
+    "pad": "^0.1.0",
+    "debug": "*",
+    "slumber": ">=0.7.0",
+    "hubot-gitlab-hooks": "^0.5.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*"
+  },
+  "main": "index.coffee",
+  "scripts": {
+    "test": "script/test"
+  }
+}
