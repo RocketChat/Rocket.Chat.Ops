@@ -11,13 +11,19 @@ We are delighted to announce that Chat-ops is now part of core.  See [core repos
 This repository will showcase a collection of Hubot and Meteor Packages that you can use in your own integrations!
 
 ## Hubots 
-* GitHub integration Hubot (outbound)
-* GitHub integration Hubot (inbound)
-* GitLab integration Hubot (outbound)
-* GitLab integration Hubot (inbound)
+
+We have been testing our GitHub and GitLab integration hubots for months on our 
+[community chat server](https://demo.rocket.chat/).
+
+Meet *Baron Bogo*!   Our [GitHub integration hubot](https://github.com/RocketChat/Rocket.Chat.Ops/tree/develop/hubots/hubot-baronbogo).
+
+Meet *Gitsy* !   Our [GitLab integration hubot](https://github.com/RocketChat/Rocket.Chat.Ops/tree/develop/hubots/hubot-gitsy).
+
+Meet *Raffie* !  Our _baby_ AI frontier exploration learning hubot.  Backed by Alice on the mother side, and Watson on the other, will Raffie grow up to be genius that make his parents proud?   Stay tuned - coming soon.
+
 
 ## Meteor Packages 
-* Drone Fleet Management (mock proof-of-concept demo)
+* Drone Fleet Management ([mock proof-of-concept demo](https://github.com/RocketChat/Rocket.Chat.Ops/tree/develop/packages/rocketchat-chatops))
 
 
 ### Old Chat-ops information
