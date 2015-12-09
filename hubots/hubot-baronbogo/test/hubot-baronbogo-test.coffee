@@ -6,6 +6,8 @@ expect = chai.expect
 
 describe 'baronbogo', ->
 	beforeEach ->
+		process.env['REPOSITORY_NAME'] = 'a'
+
 		@robot =
 			respond: sinon.spy()
 			hear: sinon.spy()

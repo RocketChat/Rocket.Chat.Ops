@@ -4,14 +4,26 @@ pad = require('pad')
 
 
 module.exports = (robot) ->
-	gitlab = gitlabaccess({'url': 'https://gitlab.com' , 'token': 'aLtWi5AYbMP24Nf-k6sk' })
+	gitlabURL = process.env['GITLAB_URL']
+	gitlabApiToken = process.env['GITLAB_API_KEY']
+
+	if gitlabURL?
+		if gitlabApiToken?
+			gitlab = gitlabaccess({'url': gitlabURL , 'token': gitlabApiToken })
+		else
+			console.error("the environment variable GITLAB_API_KEY must be set for hubot-gitsy to work properly")
+	else
+		console.error("the environment variable GITLAB_URL must be set for hubot-gitsy to work properly")
+
+
 	limit = 20
-	our_repo = 'rocketchat/Rocket.Chat'
+	
 	# console.log 'You must call me by my name - ' + robot.name
 	# console.log 'If you are curious, I am listening to  ' +  robot.listeners.length + ' source'
 
 	# setup webhooks for incoming
 	gitlabwebhook(robot)
+
 
 	robot.respond  /intro gitsy/i, (res) ->
 			reply = ""

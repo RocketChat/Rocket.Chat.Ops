@@ -1,7 +1,7 @@
 {
   "name": "hubot-baronbogo",
-  "description": "Rocket.Chat Hubot for GitHub",
-  "version": "0.7.0",
+  "description": "Rocket.Chat's Hubot for GitHub Integration",
+  "version": "0.8.0",
   "author": {
     "name": "Rocket.Chat",
     "email": "support@rocket.chat",
@@ -15,7 +15,12 @@
     "name": "Sing Li",
     "email": "sing.li@rocket.chat"
   }],
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/mit-license.php"
+    }
+  ],
   "keywords": [
     "hubot",
     "hubot-scripts",
@@ -27,7 +32,8 @@
     "url": "git://github.com/RocketChat/Rocket.Chat.Ops.git"
   },
   "bugs": {
-    "url": "https://github.com/RocketChat/Rocket.Chat.Ops/issues"
+    "url": "https://github.com/RocketChat/Rocket.Chat.Ops/issues",
+     "email": "support@rocket.chat"
   },
   "dependencies": {
     "coffee-script": "~1.6",

@@ -4,9 +4,13 @@ pad   = require('pad')
 githubevents = require('hubot-github-repo-event-notifier')
 
 module.exports = (robot) ->
+
+	our_repo = process.env['REPOSITORY_NAME']
+	if !our_repo?
+		console.error("the environment variable REPOSITORY_NAME must be specified for hubot-baronbogo to work properly")
+
 	github = githubot(robot)
 	limit = 20
-	our_repo = 'rocketchat/Rocket.Chat'
 	# console.log 'You must call me by my name - ' + robot.name
 	# console.log 'If you are curious, I am listening to  ' +  robot.listeners.length + ' source'
 

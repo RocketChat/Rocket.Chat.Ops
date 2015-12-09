@@ -6,6 +6,9 @@ expect = chai.expect
 
 describe 'baronbogo', ->
 	beforeEach ->
+		process.env['GITLAB_URL'] = 'a'
+		process.env['GITLAB_API_KEY'] = 'a'
+		process.env['REPOSITORY_NAME'] = 'a'
 		@robot =
 			respond: sinon.spy()
 			hear: sinon.spy()
