@@ -65,7 +65,7 @@ GITLAB_API_KEY="aaaefadafasfasfasfafafasfa"
 
 Gitsy handles incoming webhook events using the excellent [hubot-gitlab-hooks npm module](https://www.npmjs.com/package/hubot-gitlab-hooks).   You must configure the additional ENV variables required by this module for the webhook handling to operate correctly.
 
-##Operation
+#Operation
 
 You can learn about the commands available by asking Gitsy for an introduction.
 
