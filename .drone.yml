@@ -1,0 +1,9 @@
+build:
+  image: node:0.10
+  commands:
+    - cd hubots/hubot-baronbogo
+    - npm -d install
+    - npm test
+    - cd ../hubot-gitsy 
+    - npm -d install
+    - npm test
