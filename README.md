@@ -19,7 +19,7 @@ Meet *Baron Bogo*!   Our [GitHub integration hubot](https://github.com/RocketCha
 
 Meet *Gitsy* !   Our [GitLab integration hubot](https://github.com/RocketChat/Rocket.Chat.Ops/tree/develop/hubots/hubot-gitsy).
 
-Meet *Raffie* !  Our _baby_ AI frontier exploration learning hubot.  Backed by Alice on the mother side, and Watson on the other, will Raffie grow up to be genius that make his parents proud?   Stay tuned - coming soon.
+Meet *Raffie* !  Our _baby_ AI frontier exploration learning hubot.  Backed by [A.L.I.C.E.](http://www.alicebot.org/about.html) on the mother side, and [Watson](http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/services-catalog.html) on the other, will Raffie grow up to be the genius that make his parents proud?   Stay tuned - coming soon.
 
 
 ## Meteor Packages 
