@@ -4,6 +4,22 @@ build:
     - cd hubots/hubot-baronbogo
     - npm -d install
     - npm test
-    - cd ../hubot-gitsy 
+    - cd ../hubot-gitsy
     - npm -d install
     - npm test
+publish:
+  npm:
+    when:
+      event: tag
+    username: $$NPM_USERNAME
+    password: $$NPM_PASSWORD
+    email: $$NPM_EMAIL
+    folder: hubots/hubot-baronbogo
+
+  npm:
+    when:
+      event: tag
+    username: $$NPM_USERNAME
+    password: $$NPM_PASSWORD
+    email: $$NPM_EMAIL
+    folder: hubots/hubot-gitsy
