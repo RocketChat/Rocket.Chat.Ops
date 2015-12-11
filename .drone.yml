@@ -23,3 +23,24 @@ publish:
     password: $$NPM_PASSWORD
     email: $$NPM_EMAIL
     folder: hubots/hubot-gitsy
+
+
+  docker:
+    when:
+      event: tag
+    username: $$DOCKER_USERNAME
+    password: $$DOCKER_PASSWORD
+    email: $$DOCKER_EMAIL
+    repo: rocketchat/hubot-baronbogo
+    file: hubots/hubot-baronbogo/Dockerfile
+    tag:  ${DRONE_TAG}
+
+  docker:
+    when:
+      event: tag
+    username: $$DOCKER_USERNAME
+    password: $$DOCKER_PASSWORD
+    email: $$DOCKER_EMAIL
+    repo: rocketchat/hubot-gitsy
+    file: hubots/hubot-gitsy/Dockerfile
+    tag: ${DRONE_TAG}
