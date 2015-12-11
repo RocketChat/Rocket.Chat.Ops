@@ -1,7 +1,7 @@
 {
   "name": "hubot-gitsy",
   "description": "Rocket.Chat's Hubot for GitLab Integration",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "author": {
     "name": "Rocket.Chat",
     "email": "support@rocket.chat",
