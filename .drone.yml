@@ -33,7 +33,7 @@ publish:
     email: $$DOCKER_EMAIL
     repo: rocketchat/hubot-baronbogo
     file: hubots/hubot-baronbogo/Dockerfile
-    tag:  $$DRONE_TAG
+    tag: $$DRONE_TAG
 
   docker:
     when:
