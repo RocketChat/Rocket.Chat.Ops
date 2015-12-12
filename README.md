@@ -4,9 +4,22 @@
 
 Integrate your apps with Rocket.Chat.   Powered by Hubot.
 
-## Chat-ops is NOW CORE!
+## What is Chat-ops
 
-We are delighted to announce that Chat-ops is now part of core.  See [core repository](https://github.com/RocketChat/Rocket.Chat) for future development.
+Chat-ops allow you to integrate external systems and applications to Rocket.Chat.
+
+It consists of two major components:
+
+* Hubot
+* Chat integrations
+
+You should always be running Hubot on your own process or machine, see [Hubot documentation](https://hubot.github.com/docs/) for all you need to know to create, run, and operate hubots.
+
+Chat integrations are extension APIs that hubot code can use to integrate with Rocket.Chat.
+
+## Chat integrations is NOW CORE!
+
+We are delighted to announce that Chat integrations is now part of core.  See [core repository](https://github.com/RocketChat/Rocket.Chat) for future development of chat integrations.
 
 This repository will showcase a collection of Hubot and Meteor Packages that you can use in your own integrations!
 
