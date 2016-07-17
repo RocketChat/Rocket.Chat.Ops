@@ -53,7 +53,7 @@ GITLAB_URL="https://mygitlabserver:3000/"
 
 #####GITLAB_API_KEY
 
-The API key to allow Gitsy to access a GitLab account.  Obtain an API key from your GitLab account.  If you are an administrator, you can get an API key for the entire server, with visibility to all projects; as a user, your API key can only access your own proejects.
+The API key to allow Gitsy to access a GitLab account.  Obtain an API key from your GitLab account.  If you are an administrator, you can get an API key for the entire server, with visibility to all projects; as a user, your API key can only access your own project(s).
 
 For example:
 
