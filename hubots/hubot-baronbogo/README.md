@@ -33,14 +33,14 @@ Next, you must edit the `external-scripts.json` file to load BaronBogo:
 You will also need to configure BaronBogo for your GitHub team or project.
 
 
-#Configuration
+# Configuration
 
 You can configure BaronBogo via environment variables.
 
 
-##ENV
+## ENV
 
-###REPOSITORY_NAME
+### REPOSITORY_NAME
 
 The public GitHub project that BaronBogo will work with. Note you only need the user and repo name to specify the project:
 
@@ -50,11 +50,11 @@ For example:
 REPOSITORY_NAME="rocketchat/Rocket.Chat"
 ```
 
-##OTHER Required ENV variables
+## OTHER Required ENV variables
 
 BaronBogo handles incoming webhook events using the excellent [hubot-github-repo-event-notifier](https://www.npmjs.com/package/hubot-github-repo-event-notifier) npm module.   You must configure the additional ENV variable `HUBOT_GITHUB_EVENT_NOTIFIER_TYPES` as required by this module for the webhook handling to operate correctly.  The author of BaronBogo is also an active contributor to this project.
 
-#Operation
+# Operation
 
 You can learn about the commands available by asking BaronBogo for an introduction.
 
