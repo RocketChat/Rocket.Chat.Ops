@@ -19,7 +19,7 @@ Gitsy can perform the following (and you can extend Gitsy readily by modifying i
 For this script to take effect, you must first have your [hubot environment up and running](https://hubot.github.com/docs/), then install Gitsy with:
 
 ```
-npm install --save hubot-gitsy
+npm install --save @rocket.chat/hubot-gitsy
 ```
 
 Next, you must edit the `external-scripts.json` file to load Gitsy:

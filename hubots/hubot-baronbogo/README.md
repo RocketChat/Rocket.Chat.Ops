@@ -18,7 +18,7 @@ BaronBogo can perform the following with a public project repository on GitHub (
 For this script to take effect, you must first have your [hubot environment up and running](https://hubot.github.com/docs/), then install BaronBogo with:
 
 ```
-npm install --save hubot-baronbogo
+npm install --save @rocket.chat/hubot-baronbogo
 ```
 
 Next, you must edit the `external-scripts.json` file to load BaronBogo:
