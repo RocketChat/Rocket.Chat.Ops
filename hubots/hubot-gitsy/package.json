@@ -1,5 +1,5 @@
 {
-  "name": "hubot-gitsy",
+  "name": "@rocket.chat/hubot-gitsy",
   "description": "Rocket.Chat's Hubot for GitLab Integration",
   "version": "0.8.3",
   "author": {
