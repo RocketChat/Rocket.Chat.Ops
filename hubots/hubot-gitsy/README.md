@@ -65,6 +65,14 @@ GITLAB_API_KEY="aaaefadafasfasfasfafafasfa"
 
 Gitsy handles incoming webhook events using the excellent [hubot-gitlab-hooks npm module](https://www.npmjs.com/package/hubot-gitlab-hooks).   You must configure the additional ENV variables required by this module for the webhook handling to operate correctly.
 
+Of note are:
+
+1. For `GITLAB_CHANNEL`, you must specify a channel id and not channel name.
+1. Make sure you use Gitlab's built-in  "slack" service instead of webhooks for integration.
+
+
+
+
 #Operation
 
 You can learn about the commands available by asking Gitsy for an introduction.
